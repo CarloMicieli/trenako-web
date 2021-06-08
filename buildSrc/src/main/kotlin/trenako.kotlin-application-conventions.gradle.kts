@@ -25,6 +25,8 @@ dependencies {
     implementation("io.micronaut.reactor:micronaut-reactor")
     implementation("io.swagger.core.v3:swagger-annotations")
     implementation("javax.annotation:javax.annotation-api")
+    implementation("io.micronaut.liquibase:micronaut-liquibase")
+    implementation("org.slf4j:jul-to-slf4j:1.7.30")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("io.r2dbc:r2dbc-postgresql")
     runtimeOnly("org.postgresql:postgresql")

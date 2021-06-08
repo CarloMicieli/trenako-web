@@ -25,6 +25,18 @@ Go to the project directory
 
 ```bash
   cd trenako-web
+```
+
+to run the `postgres` database:
+
+```bash
+  docker run --rm --name postgres-dev \
+    -e POSTGRES_PASSWORD=mysecretpassword \
+    -e POSTGRES_DB=trenako \
+    -d -p 5432:5432 -v postgres_data_dev:/var/lib/postgresql/data postgres
+````
+
+```bash
   ./gradlew webapi:run
   
     > Task :webapi:run
@@ -35,16 +47,16 @@ Go to the project directory
     |_|  |_|_|\___|_|  \___/|_| |_|\__,_|\__,_|\__|
       Micronaut (v2.5.5)
     
-    20:05:56.269 [main] INFO  io.micronaut.runtime.Micronaut - Startup completed in 2198ms. Server Running: http://localhost:8080
+INFO  io.micronaut.runtime.Micronaut - Startup completed in 2198ms. Server Running: http://localhost:8080
 ```
 
 ## Project layout
 
-* `common`: common code for the remaining projects
-* `catalog`: the catalog module
-* `collecting`: the collecting module
-* `social`: the accounts module
-* `webapi`: the restful web api
+* `common` common code for the remaining projects
+* `catalog` the catalog module
+* `collecting` the collecting module
+* `social` the accounts module
+* `webapi` the restful web api
 
 ## Contributing
 
